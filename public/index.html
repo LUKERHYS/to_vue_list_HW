@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-Vue List</title>
+    <script src="./js/bundle.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+<h1>To-Vue list...</h1>
+    <div id="app">
+
+      <form @submit.prevent="saveNewItem">
+        <label for="new-item">Add new item: </label>
+        <input type="text" id="new-item" v-model="newItem" />
+        <label for="priorityHigh">High Priority</label>
+        <input id="priority" type="checkbox"/>
+        <input type="submit" value="Save"/>
+      </form>
+
+      <ul>
+        <li v-for="(item, index) in items" v-bind:class="item.completed ? 'completed' :'not-completed' && item.priorityHigh ? 'priorityHigh' : 'priorityNormal'">
+          <span>{{item.name}}</span>
+          <button v-if="!item.completed" @click="completedItem(index)">Done</button>
+        </li>
+      </u
+
+    </div>
+
+  </body>
+</html>
