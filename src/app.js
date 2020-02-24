@@ -7,17 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
       items: [
         {name: "MOT", completed: false, priorityHigh: true},
         {name: "Empty bins", completed: false, priorityHigh: false},
-        {name: "create VUE web app", completed: true, priorityHigh: true}
+        {name: "create VUE web app", completed: true, priorityHigh: false}
       ],
       newItem: "",
-      priority: "#priorty"
+      checkbox: function() {
+        if(this.checkbox === 'checked'){
+          this.priorityHigh = true;
+        }
+      }
     },
     methods: {
       saveNewItem: function() {
         this.items.push({
           name: this.newItem,
           completed: false,
-          priorityHigh: this.priorty
+          priorityHigh: this.checkbox
         });
         this.newItem = "";
       },

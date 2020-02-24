@@ -7,21 +7,32 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-<h1>To-Vue list...</h1>
+    <nav>
+      <h1>To-Vue list...</h1>
+    </nav>
     <div id="app">
 
       <form @submit.prevent="saveNewItem">
-        <label for="new-item">Add new item: </label>
-        <input type="text" id="new-item" v-model="newItem" />
-        <label for="priorityHigh">High Priority</label>
-        <input id="priority" type="checkbox"/>
-        <input type="submit" value="Save"/>
+        <div class="form-container">
+
+          <div class="form-child">
+
+            <label for="new-item">Add new item: </label>
+            <input type="text" id="new-item" v-model="newItem" />
+
+            <input type="checkbox" id="checkbox" v-model="checkbox"/>
+            <label for="checkbox">High Priority</label>
+            <button class="save" type="submit">Save</button>
+
+          </div>
+
+        </div>
       </form>
 
       <ul>
-        <li v-for="(item, index) in items" v-bind:class="item.completed ? 'completed' :'not-completed' && item.priorityHigh ? 'priorityHigh' : 'priorityNormal'">
+        <li v-for="(item, index) in items" v-bind:class="[item.completed ? 'completed' :'not-completed', item.priorityHigh ? 'priorityHigh' : 'priorityNormal']">
           <span>{{item.name}}</span>
-          <button v-if="!item.completed" @click="completedItem(index)">Done</button>
+          <button class="done" v-if="!item.completed" @click="completedItem(index)">Done</button>
         </li>
       </u
 

@@ -1,11 +1,51 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+h1{
+  font-size: 40px;
+  font-family: impact;
+}
 ul {
   list-style: none;
 }
 li {
+  display: flex;
+  justify-content: space-between;
   padding: 2%;
   margin: 1%;
+  font-family: 'Hind' ;
+  font-size: 25px;
 }
-
+#checkbox{
+  padding: 2%;
+}
+label {
+  font-family: 'Hind';
+  font-size: 25px;
+}
+.save, .done {
+  padding: 1% 2%;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+}
+.save {
+  background-color: salmon;
+}
+.done {
+  background-color: green;
+}
 .priorityHigh {
   color: red;
   border: solid red;
@@ -14,11 +54,12 @@ li {
   color: orange;
   border: solid orange;
 }
-.completed{
+.completed {
   text-decoration: line-through;
   color: green;
   border: solid green;
+  opacity: 0.5;
 }
-.not-completed{
+.not-completed {
   text-decoration: none;
 }
