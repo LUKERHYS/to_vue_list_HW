@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#app',
     data: {
       items: [
-        {name: "MOT", completed: false, priorityHigh: true},
-        {name: "Empty bins", completed: false, priorityHigh: false},
-        {name: "create VUE web app", completed: true, priorityHigh: false}
+        // {name: "MOT", completed: false, priorityHigh: true},
+        // {name: "Empty bins", completed: false, priorityHigh: false},
+        // {name: "create VUE web app", completed: true, priorityHigh: false}
       ],
       newItem: "",
       checkbox: function() {
