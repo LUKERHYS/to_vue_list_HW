@@ -10,11 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // {name: "create VUE web app", completed: true, priorityHigh: false}
       ],
       newItem: "",
-      checkbox: function() {
-        if(this.checkbox === 'checked'){
-          this.priorityHigh = true;
-        }
-      }
     },
     methods: {
       saveNewItem: function() {
@@ -28,6 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
       completedItem: function(index) {
         this.items[index].completed = !this.items[index].completed;
       },
+      checkbox: function() {
+        if(this.checkbox === 'checked'){
+          this.priorityHigh = true;
+        }
+      }
     }
   })
 });
